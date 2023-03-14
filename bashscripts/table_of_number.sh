@@ -1,0 +1,10 @@
+#!/bin/bash
+table()
+{
+
+for num in {1..10}
+do
+  echo  "$1 * $num = $(( $1*$num )) "
+done
+
+}
