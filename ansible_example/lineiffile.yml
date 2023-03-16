@@ -1,0 +1,7 @@
+- name: Ensure SELinux is set to enforcing mode
+  hosts: localhost
+  tasks:
+  - lineinfile:
+      path: /home/ncs/shivansh notes/java-path-set.txt
+      regexp: '^SELINUX='
+      line: SELINUX=enforcing
