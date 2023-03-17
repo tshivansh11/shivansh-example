@@ -1,0 +1,10 @@
+- name: give the pormision
+  hosts: localhost
+  tasks: 
+  - file:
+      path: /home/ncs/Untitled Document 1
+      owner: ncs
+      group: ncs
+      mode: '711'     
+      msg: 
+        - "your file mood is set"
