@@ -6,5 +6,4 @@
       owner: ncs
       group: ncs
       mode: '711'     
-      msg: 
-        - "your file mood is set"
+      

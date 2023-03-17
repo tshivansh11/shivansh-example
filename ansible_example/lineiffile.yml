@@ -4,4 +4,4 @@
   - lineinfile:
       path: /home/ncs/shivansh notes/java-path-set.txt
       regexp: '^SELINUX='
-      line: SELINUX=enforcing
+      line: SELINUX= shivasnh
