@@ -1,0 +1,28 @@
+- name: install java 19
+  hosts: localhost
+  tasks:
+  - name: Download Java 19
+    get_url:
+      url: https://download.oracle.com/java/19/latest/jdk-19_linux-x64_bin.tar.gz
+      dest: /home/ncs/software
+  - name: untar java file 
+    unarchive:
+      src: /home/ncs/software/jdk-19_linux-x64_bin.tar.gz
+      dest: /home/ncs/java
+      mode: 0755
+      remote_src: yes
+    
+  - name: install java
+    command: sudo update-alternatives --install /usr/bin/java java //home/ncs/java/jdk-19.0.2/bin/java 1
+    command: sudo update-alternatives --install /usr/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1
+
+
+
+
+
+
+
+
+
+
+
