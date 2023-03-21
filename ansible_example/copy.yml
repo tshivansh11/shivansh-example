@@ -3,4 +3,4 @@
   tasks:
   - copy:
       src: /home/ncs/whoami.sh
-      dest: /home/ncs/Untitled Document 1
+      dest: /home/ncs/Untitled.txt

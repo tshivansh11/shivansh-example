@@ -3,5 +3,6 @@
   tasks:
   - lineinfile:
       path: /home/ncs/shivansh notes/java-path-set.txt
-      regexp: '^SELINUX='
-      line: SELINUX= shivasnh
+      regexp: '^SELINUX ='
+      line: SELINUX = shivansh 
+      

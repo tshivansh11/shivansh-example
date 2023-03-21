@@ -1,9 +1,12 @@
+--- #Ansible file module is used to creating and deleting the file or
+    # multiple files in the remote server. You can also create and 
+    #delete the directories and change the permissions of the data.
 - name: give the pormision
   hosts: localhost
   tasks: 
   - file:
-      path: /home/ncs/Untitled Document 1
+      path: /home/ncs/Untitled.txt
       owner: ncs
       group: ncs
-      mode: '711'     
+      mode: '777'     
       

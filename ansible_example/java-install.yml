@@ -1,5 +1,6 @@
 - name: install java 19
   hosts: localhost
+  become: yes
   tasks:
   - name: Download Java 19
     get_url:
@@ -15,14 +16,3 @@
   - name: install java
     command: sudo update-alternatives --install /usr/bin/java java //home/ncs/java/jdk-19.0.2/bin/java 1
     command: sudo update-alternatives --install /usr/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,11 @@
+- name: Install JRE
+  hosts: localhost  
+  become: yes
+  tasks:
+  - apt: 
+      name: jenkins_jre
+      state: prasent
+  - name: Add APT key
+    get_url:
+      url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+      dest: /home/ncs/software

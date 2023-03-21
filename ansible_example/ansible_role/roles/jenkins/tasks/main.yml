@@ -1,0 +1,19 @@
+- name: Install JRE
+  apt: 
+    name: "{{ item }}"
+    update_cache: yes
+    install_recommends: no
+  items:
+  - "{{ jenkins_jre }}"
+- name: Add APT key
+  apt_key:
+    url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+- name: Copy jenkins.list to /etc/apt/sources.list.d/jenkins.list
+  copy:
+    src: jenkins.list
+    dest: /etc/apt/sources.list.d/jenkins.list
+- name: Install Jenkins
+  apt: 
+    name: jenkins
+    update_cache: yes
+    install_recommends: no

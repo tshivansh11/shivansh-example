@@ -1,0 +1,6 @@
+- name: docker installing
+  hosts: localhost
+  become: yes
+  roles:
+  - docker
+      
