@@ -1,0 +1,10 @@
+- name: itrating a loop
+  hosts:
+  tasks:
+  - name: folder  
+    command: "cat {{ item }}"
+    with_item:
+    - folder1
+    - folder2
+    - folder3 
+    args: chdir: /home/ncs/  

@@ -2,7 +2,7 @@
   apt: 
     name: "{{ item }}"
     update_cache: yes
-    install_recommends: no
+    #install_recommends: no
   items:
   - "{{ jenkins_jre }}"
 - name: Add APT key
@@ -16,4 +16,5 @@
   apt: 
     name: jenkins
     update_cache: yes
-    install_recommends: no
+    #install_recommends: no  
+ 

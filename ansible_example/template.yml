@@ -1,0 +1,10 @@
+- name: copy 
+  hosts: localhost 
+  vars:  
+    variable1: 'Hello'  
+    variable2: 'My first playbook using template'  
+  tasks:  
+  - name: Basic Template Example  
+    template:  
+      src: /home/ncs/example1.yml
+      dest: /home/ncs/Documents/shivansh-example/ansible_example/  
