@@ -4,5 +4,5 @@
   - shell: pwd 
     register: result  
   - debug:
-      var: result.stdout_line 
+      var: result.stdout_line
 

@@ -3,4 +3,4 @@
   hosts: localhost  
   tasks:  
   - name: Print debug message  
-    debug:
+    debug: 

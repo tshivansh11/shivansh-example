@@ -7,4 +7,4 @@
   - name: Basic Template Example  
     template:  
       src: /home/ncs/example1.yml
-      dest: /home/ncs/Documents/shivansh-example/ansible_example/  
+      dest: /home/ncs/Documents/shivansh-example/ansible_example/

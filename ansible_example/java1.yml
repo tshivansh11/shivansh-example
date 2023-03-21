@@ -4,4 +4,4 @@
   tasks:
     apt: 
     - name: openjdk-8-jdk
-    - state: present 
+    - state: present
