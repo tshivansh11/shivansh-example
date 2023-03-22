@@ -9,6 +9,7 @@
     mode: 0755
     remote_src: yes
 - name: install java
-  command: sudo update-alternatives --install /usr/bin/java java //home/ncs/java/jdk-19.0.2/bin/java 1
-  command: sudo update-alternatives --install /usr/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1
- 
+  command: sudo update-alternatives --install /user/bin/java java //home/ncs/java/jdk-19.0.2/bin/java 1
+  command: sudo update-alternatives --install /user/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1
+export JAVA_HOME=/usr/java/jre1.8.0_51
+export PATH=$PATH:$JAVA_HOME
