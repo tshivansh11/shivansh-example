@@ -7,4 +7,4 @@
     - folder1
     - folder2
     - folder3 
-    args: chdir: /home/ncs/  
+    args: chdir: /home/ncs/   

@@ -4,3 +4,4 @@
   tasks:
   - name: install apache2
     apt: name="{{ pkg }}" state=present 
+ 

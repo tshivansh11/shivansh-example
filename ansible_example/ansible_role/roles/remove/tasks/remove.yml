@@ -1,3 +1,3 @@
 - name: remove tree
-  cmd: sudo apt remove tree -y
- 
+  cmd: sudo apt remove tree -y 
+  

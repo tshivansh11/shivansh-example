@@ -6,4 +6,4 @@
       src: /home/ncs/software/jdk-19_linux-x64_bin.tar.gz
       dest: /home/ncs/java
       mode: 0755
-      remote_src: yes
+      remote_src: yes 

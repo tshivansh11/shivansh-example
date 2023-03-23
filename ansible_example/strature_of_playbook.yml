@@ -1,0 +1,36 @@
+---
+- name: Playbook Name
+  hosts: target_hosts  # specify the hosts or host group to run the playbook against
+  become: true  # use sudo to elevate privileges on the target hosts
+
+  vars:
+    # define variables to use in the playbook
+
+  tasks:
+    # list the tasks to be performed on the target hosts
+
+    - name: Task Name
+      <module_name>:  # specify the module to use for the task
+        <module_parameters>:  # specify any parameters required by the module
+
+    # add more tasks as needed
+
+  handlers:
+    # list the handlers to be triggered by the tasks
+
+    - name: Handler Name
+      <module_name>:  # specify the module to use for the handler
+        <module_parameters>:  # specify any parameters required by the module
+
+    # add more handlers as needed
+
+  # specify any additional configuration options for the playbook
+
+  vars_files:
+    - vars/main.yml  # specify any variable files to include
+
+  roles:
+    - role_name  # specify any roles to include
+
+  # add more configuration options as needed
+

@@ -2,4 +2,4 @@
   hosts: localhost
   become: true
   roles:
-    - java2
+    - java2 

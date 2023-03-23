@@ -1,0 +1,6 @@
+---
+- name: java 
+  service:
+    name: openjdk-11-jdk
+    state: restarted
+  become_user: root

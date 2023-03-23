@@ -1,22 +1,19 @@
-- name: Add Jenkins-CI Repository Key
+- name: Install OpenJDK 11
+  apt:
+    name: openjdk-11-jdk
+    state: present
+
+- name: Add Jenkins Debian package key
   apt_key:
-    url: "http://pkg.jenkins.io/{{ ansible_os_family|debian }}/jenkins.io.key"
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
     state: present
 
-- name: Add Jenkins-CI Repository
+- name: Add Jenkins Debian package repository
   apt_repository:
-    repo: 'deb http://pkg.jenkins.io/{{ ansible_os_family|debian }} binary/'
+    repo: deb https://pkg.jenkins.io/debian-stable binary/
     state: present
-    update_cache: yes
 
-- name: Install Jenkins-CI
+- name: Install Jenkins
   apt:
     name: jenkins
-    state: present
-    update_cache: yes
-    cache_valid_time: 600
-  notify:
-    - Restart Jenkins
-  register: install_jenkins
-
-- 
+    state: present   

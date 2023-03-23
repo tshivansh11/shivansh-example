@@ -2,4 +2,4 @@
   hosts: localhost
   tasks:
   - command: cat /home/ncs/Documents/shivansh-example/ansible_example/file.yml
-    register: /home/ncs/example1.yml
+    register: /home/ncs/example1.yml 

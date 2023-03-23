@@ -1,10 +1,14 @@
 - name: copy 
   hosts: localhost 
+  become: yes
+
   vars:  
     variable1: 'Hello'  
     variable2: 'My first playbook using template'  
   tasks:  
   - name: Basic Template Example  
     template:  
-      src: /home/ncs/example1.yml
+      src: /home/ncs/whoami.j2
       dest: /home/ncs/Documents/shivansh-example/ansible_example/
+      owner: ncs
+      group: ncs 

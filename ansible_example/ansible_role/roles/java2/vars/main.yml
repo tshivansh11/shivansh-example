@@ -1,0 +1,4 @@
+jdk_download_url: https://download.java.net/java/GA/jdk18.0.2.1/db379da656dc47308e138f21b33976fa/1/GPL/openjdk-18.0.2.1_linux-x64_bin.tar.gz
+jdk_download_location: /home/ncs/software/openjdk-18.0.2.1_linux-x64_bin.tar.gz
+java_home: /home/ncs/java/jdk-18.0.2.1
+javac: /etc/profile

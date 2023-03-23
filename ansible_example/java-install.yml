@@ -15,4 +15,4 @@
     
   - name: install java
     command: sudo update-alternatives --install /usr/bin/java java //home/ncs/java/jdk-19.0.2/bin/java 1
-    command: sudo update-alternatives --install /usr/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1 
+    command: sudo update-alternatives --install /usr/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1  

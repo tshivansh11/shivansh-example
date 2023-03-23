@@ -4,4 +4,4 @@
   - name: compresh 
     archive:
       path: /home/ncs/example1.yml
-      dest: /home/ncs/example1.yml.tgz
+      dest: /home/ncs/example1.yml.tgz 

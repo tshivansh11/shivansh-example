@@ -1,0 +1,9 @@
+- name: install apache2
+  hosts: localhost
+  become: yes
+  tasks:
+   - name: install
+    apt: name="{{ web }}" states=present
+
+
+ 

@@ -1,15 +1,19 @@
+- name: Create Java directory
+  file:
+    path: /home/ncs/java
+    state: directory
+  
 - name: Download Java 19
   get_url:
     url: https://download.oracle.com/java/19/latest/jdk-19_linux-x64_bin.tar.gz
-    dest: /home/ncs/software
+    dest: /home/ncs/java
 - name: untar java file 
   unarchive:
-    src: /home/ncs/software/jdk-19_linux-x64_bin.tar.gz
+    src: /home/ncs/java/jdk-19_linux-x64_bin.tar.gz
     dest: /home/ncs/java
     mode: 0755
     remote_src: yes
 - name: install java
-  command: sudo update-alternatives --install /user/bin/java java //home/ncs/java/jdk-19.0.2/bin/java 1
-  command: sudo update-alternatives --install /user/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1
-export JAVA_HOME=/usr/java/jre1.8.0_51
-export PATH=$PATH:$JAVA_HOME
+  command: sudo update-alternatives --install /usr/bin/java java//home/ncs/java/jdk-19.0.2/bin/java 1
+  command: sudo update-alternatives --install /usr/bin/javac javac //home/ncs/java/jdk-19.0.2/bin/javac 1
+  

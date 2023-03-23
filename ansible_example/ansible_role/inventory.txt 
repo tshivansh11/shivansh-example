@@ -1,0 +1,14 @@
+
+- name: Add Java path to .bashrc file
+  lineinfile:
+    path: "/home/ncs/.bashrc"
+    regexp: '^export JAVA_HOME='
+    line: 'export JAVA_HOME=/home/ncs/Java'
+    state: present
+    become_user: ncs
+    become_method: su
+
+- name: Reload .bashrc file
+  shell: ". /home/ncs/.bashrc"
+  become_user: ncs
+  become_method: su

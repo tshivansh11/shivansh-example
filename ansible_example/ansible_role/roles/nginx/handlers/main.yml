@@ -8,3 +8,4 @@
     name: nginx
     state: restarted
   become_user: root
+  
