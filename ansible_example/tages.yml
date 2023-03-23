@@ -1,0 +1,21 @@
+- name: create multiple and delete files from a location
+  hosts: localhost
+  tasks:
+  - name: create multiple files from a locatoion
+    file:
+      path: "/home/ncs/{{ item }}"
+      state: touch
+    loop:
+    - file1
+    - file2
+    tags:
+    - create_file
+  - name: delete multiple files from a locatoion
+    file:
+      path: "/home/ncs/{{ item }}"
+      state: absent
+    loop:
+    - file1
+    - file2
+    tags:
+    - delete_file

@@ -1,0 +1,6 @@
+- name: intsall java via extra_var
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: install apache2
+    apt: name="{{ pkg }}" state=present 
