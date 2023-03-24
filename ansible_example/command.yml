@@ -1,5 +1,5 @@
 - name: return motd to registerd 
   hosts: localhost
   tasks: 
-  - command: /home/ncs/Untitled Document 1
-    register: chmod +x Unitled Document 1
+  - command: /home/ncs/Untitled.txt
+    register: chmod +x Unitled.txt
