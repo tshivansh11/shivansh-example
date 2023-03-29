@@ -2,7 +2,7 @@
   hosts: localhost
   tasks: 
   - file:
-      path: /home/ncs/Untitled Document 1
+      path: /home/ncs/Untitled.txt
       owner: ncs
       group: ncs
       mode: '711'     
