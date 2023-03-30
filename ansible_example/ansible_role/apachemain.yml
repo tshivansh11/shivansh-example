@@ -1,0 +1,6 @@
+- name: install apache2
+  hosts: localhost
+  become: yes
+  roles:
+  - apache 
+ 

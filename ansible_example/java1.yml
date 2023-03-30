@@ -1,0 +1,7 @@
+- name: Install Java JDK rpm from a local file
+  hosts: localhost
+  become: yes
+  tasks:
+    apt: 
+    - name: openjdk-8-jdk
+    - state: present 

@@ -1,0 +1,3 @@
+#java_home: /home/ncs/java/jdk-18.0.2.1
+java_version: "16.0.1" # Change this to the version you want to download
+java_home: "/usr/local/java" # Change this to the desired installation directory

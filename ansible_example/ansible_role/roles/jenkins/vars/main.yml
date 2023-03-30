@@ -1,0 +1,2 @@
+jenkins.repo: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+home: deb https://pkg.jenkins.io/debian-stable binary/

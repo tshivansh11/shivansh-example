@@ -1,0 +1,15 @@
+- name: template module
+  hosts: localhost  
+  become: yes
+  vars:  
+    variable1: "Hello"  
+    variable2: "My first playbook using template"  
+  tasks:  
+  - name: Basic Template Example  
+    template:  
+      src: /home/ncs/whoami
+      dest: /home/ncs/Documents/output.txt 
+      #owner: ncs
+      #group: ncs
+      #mode: 0755
+ 

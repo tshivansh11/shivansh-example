@@ -2,5 +2,10 @@
   hosts: localhost
   tasks:
   - copy:
+<<<<<<< HEAD
       src: /home/ncs/whoami
       dest: /home/ncs/Untitled Document 1
+=======
+      src: /home/ncs/whoami.sh
+      dest: /home/ncs/Untitled.txt 
+>>>>>>> all-bashscripts

@@ -1,0 +1,5 @@
+- name: remove tree
+  hosts: localhost
+  become: yes
+  roles:
+  - remove 

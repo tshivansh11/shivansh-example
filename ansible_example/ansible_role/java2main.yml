@@ -1,0 +1,5 @@
+- name: Java installation
+  hosts: localhost
+  become: true
+  roles:
+    - java2 
