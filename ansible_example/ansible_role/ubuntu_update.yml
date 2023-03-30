@@ -1,0 +1,5 @@
+- name: update and upgrade ubuntu 
+  hosts: localhost
+  become: yes
+  roles:
+  - ubuntu
