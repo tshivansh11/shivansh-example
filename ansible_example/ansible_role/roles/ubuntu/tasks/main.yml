@@ -1,0 +1,62 @@
+# ---
+# - name: Update APT cache
+#   apt:
+#     update_cache: True
+#     cache_valid_time: 3600
+
+# - name: Check if there are available updates
+#   command: /usr/lib/update-notifier/apt-check --package-names
+#   register: pkg_list
+
+# - name: Perform upgrade of all packages to the latest version
+#   apt:
+#     upgrade: dist
+#   when: pkg_list.stderr != ""
+
+# - name: Check if a reboot is required
+#   stat:
+#     path: /var/run/reboot-required
+#     get_md5: no
+#   register: reboot_flag
+
+# - name: Print message if reboot is required
+#   debug:
+#     msg: "The server requires a reboot after upgraded"
+#   when: reboot_flag.stat.exists
+ 
+- name: Update all installed packages using YUM module
+  yum:
+    name: '*'
+    state: latest
+    update_cache: yes
+    update_only: yes
+  when: ansible_os_family == "RedHat"
+
+- name: Update all packages to their latest version
+  yum:
+    name: "*"
+    state: latest
+  when: ansible_os_family == "Redhat"
+
+- name: Check if there are available updates
+  command: /usr/lib/update-notifier/yum-check --package-names
+  register: pkg_list
+
+- name: Perform upgrade of all packages to the latest version
+  yum:
+    upgrade: dist
+  when: pkg_list.stderr != ""
+  when: ansible_os_family == "Redhat"
+ 
+- name: Check if a reboot is required
+  stat:
+    path: /var/run/reboot-required
+    get_md5: no
+  register: reboot_flag
+
+- name: Print message if reboot is required
+  debug:
+    msg: "The server requires a reboot after upgraded"
+  when: reboot_flag.stat.exists
+
+ 
